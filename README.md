@@ -1,6 +1,26 @@
-## Conclusiones y recomendaciones
+# Ejecutar el proyecto:
 
-# Recomendaciones:
+- Para ejecutar el proyecto, basta con abrir una terminal dentro de la carpeta raíz del mismo y ejecutar el siguiente comando:
+
+ docker-compose up
+
+## Pruebas realizadas:
+
+- Las pruebas realizadas fueron manuales, con el fin de combrobar la creación de la red y la comunicación entre los contenedores
+
+ - Para verificar que la red se creara, se ejecutaba el comando:
+  
+  docker network ls
+  docker network inspect <nombre de la red>
+
+ - Para verificar la comunicación entre los contenedores, se ejecutaba lo siguiente:
+
+  docker exec -it <nombre del contenedor>
+       ping <ip de otro contendor>
+  
+# Conclusiones y recomendaciones
+
+## Recomendaciones:
 
 1. Utilizar contenedores creados desde 0 con Ubuntu o Alpine, la documentación de los contenedores ya construidos no suele ser muy precisa.
 
@@ -22,7 +42,7 @@
 
 10. Ir poco a poco creando y conectando los contenedores y probando que su funcionamiento sea el esparado, antes de seguir integrando más funcionalidad a la red.
 
-# Conclusiones:
+## Conclusiones:
 
 1. Mucha de la documentación encontrada no era del todo clara y a la hora de replicar guías, incluso de las páginas oficiales, estas contenian errores.
 
